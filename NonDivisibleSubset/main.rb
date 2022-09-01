@@ -25,15 +25,13 @@ def recursive_search_criteria(collection, constructed_ary, k, index)
     collection.delete_at(index)
   end
 
-  evaluate_and_attach(collection.first, constructed_ary, k)
+  constructed_ary << collection.first if number_verified?(constructed_ary, collection.first, k)
   collection.shift
   recursive_search_criteria(collection, constructed_ary, k, nil)
 end
 
-def evaluate_and_attach(to_search, constructed_ary, k)
-  if constructed_ary.all? { |numb| ((numb + to_search) / k) % 1.0 != 0.0 }
-    constructed_ary << to_search
-  end
+def number_verified?(constructed, evaluted, k)
+  constructed.all? { |numb| (((numb + evaluted) / k) % 1.0) != 0.0 }
 end
 
 non_divisible_subset(ary_s, num_k)
