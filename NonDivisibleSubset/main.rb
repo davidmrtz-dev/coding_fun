@@ -9,8 +9,7 @@ def non_divisible_subset(s, k)
   max_measures = Array.new
 
   floated.each_with_index do |_, index|
-    new_ary = Array.new(floated)
-    max_measures << recursive_search_criteria(new_ary, constructed_ary, k, index).size
+    max_measures << recursive_search_criteria(Array.new(floated), constructed_ary, k, index).size
     constructed_ary = []
   end
 
@@ -31,7 +30,28 @@ def recursive_search_criteria(collection, constructed_ary, k, index)
 end
 
 def number_verified?(constructed, evaluted, k)
-  constructed.all? { |numb| (((numb + evaluted) / k) % 1.0) != 0.0 }
+  if constructed.size.equal?(1)
+    return ((constructed.first + evaluted) / k) % 1 != 0
+  else
+    return verify_recursively(Array.new(constructed + [evaluted]), k)
+
+    # constructed.all? { |num| (((num + evaluted) / k) % 1.0) != 0.0 }
+  end
+end
+
+def verify_recursively(collection, k)
+  result = Array.new
+  persisted_collection = collection
+
+  persisted_collection.each_with_index do |_, index|
+    ary_to_eval = collection
+    to_evaluate = ary_to_eval[index]
+    ary_to_eval.delete_at(index)
+
+    result << to_evaluate if ary_to_eval.all? { |num| (((num + to_evaluate) / k) % 1.0) != 0.0 }
+  end
+
+  return true if result.size == collection.size
 end
 
 non_divisible_subset(ary_s, num_k)
