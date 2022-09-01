@@ -33,9 +33,9 @@ def number_verified?(constructed, evaluted, k)
   if constructed.size.equal?(1)
     return ((constructed.first + evaluted) / k) % 1 != 0
   else
-    return verify_recursively(Array.new(constructed + [evaluted]), k)
+    # return verify_recursively(Array.new(constructed + [evaluted]), k)
 
-    # constructed.all? { |num| (((num + evaluted) / k) % 1.0) != 0.0 }
+    constructed.all? { |num| (((num + evaluted) / k) % 1.0) != 0.0 }
   end
 end
 
