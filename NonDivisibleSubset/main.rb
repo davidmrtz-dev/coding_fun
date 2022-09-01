@@ -40,18 +40,7 @@ def number_verified?(constructed, evaluted, k)
 end
 
 def verify_recursively(collection, k)
-  result = Array.new
   persisted_collection = collection
-
-  persisted_collection.each_with_index do |_, index|
-    ary_to_eval = collection
-    to_evaluate = ary_to_eval[index]
-    ary_to_eval.delete_at(index)
-
-    result << to_evaluate if ary_to_eval.all? { |num| (((num + to_evaluate) / k) % 1.0) != 0.0 }
-  end
-
-  return true if result.size == collection.size
 end
 
 non_divisible_subset(ary_s, num_k)
