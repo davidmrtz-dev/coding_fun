@@ -11,6 +11,14 @@ module Implementation
         ans << temp.map { |e| e - price }
         ans.flatten!
         temp = [price]
+      elsif temp.any? { |t| t >= price }
+        temp.each do |num|
+          if num >= price
+            ans << num - price
+            temp.delete_at(temp.index(num))
+          end
+        end
+        temp.push(price)
       else
         temp.push(price)
       end
