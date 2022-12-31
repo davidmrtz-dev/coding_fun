@@ -9,8 +9,7 @@ def find_disappeared_numbers(nums)
   ans
 end
 
-numb_ary = [4,3,2,7,8,2,3,1]
+numb_ary = [4, 3, 2, 7, 8, 2, 3, 1]
 # numb_ary = [1,1]
-
 
 puts find_disappeared_numbers(numb_ary)
