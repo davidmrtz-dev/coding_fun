@@ -16,9 +16,11 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  IgnoredMethods: ['describe']
   Max: 30
-
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
@@ -33,6 +35,8 @@ Style/DefWithParentheses:
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 Style/MixinUsage:
+  Enabled: false
+Style/OpenStructUse:
   Enabled: false
 
 Layout/HashAlignment:
