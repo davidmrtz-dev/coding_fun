@@ -28,7 +28,7 @@ RSpec.describe 'N repeated in size 2n' do
   end
 
   it 'should assert' do
-    expect(final_prices([4,7,1,9,4,8,8,9,4]))
-      .to eq([3,6,1,5,0,0,4,5,4])
+    expect(final_prices([4, 7, 1, 9, 4, 8, 8, 9, 4]))
+      .to eq([3, 6, 1, 5, 0, 0, 4, 5, 4])
   end
 end
