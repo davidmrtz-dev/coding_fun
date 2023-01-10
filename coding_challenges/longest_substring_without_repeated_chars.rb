@@ -9,7 +9,7 @@ module Implementation
     ans = 0
 
     (0..(s.length)).each do |idx|
-      byebug
+      
       if se.include?(s[idx])
         se.delete(s[left])
         left += 1
