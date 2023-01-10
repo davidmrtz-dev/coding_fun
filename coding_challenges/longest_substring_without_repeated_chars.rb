@@ -15,7 +15,7 @@ module Implementation
         left += 1
       end
       se.add(s[idx])
-      # ans = [ans, idx - left + 1].max
+      ans = [ans, idx - left + 1].max
     end
 
     ans
