@@ -14,4 +14,8 @@ RSpec.describe 'Buestiest time in the mall' do
       [1487901211, 7,  0]
     ])).to eq 1487800378
   end
+
+  it 'should assert' do
+    expect(Implementation::find_busiest_period([[1487799426,21,1]])).to eq 1487799426
+  end
 end
