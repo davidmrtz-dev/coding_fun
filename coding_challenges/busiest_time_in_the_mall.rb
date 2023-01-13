@@ -24,7 +24,7 @@ module Implementation
           last_max_ts = ts
         end
 
-        # total_ppl = 0
+
         last_ts = ts
       else
         last_max_ppl = total_ppl
