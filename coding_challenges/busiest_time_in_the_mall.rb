@@ -1,6 +1,3 @@
-require 'byebug'
-require 'ostruct'
-
 module Implementation
   def find_busiest_period(arr)
     last_max_ts = 0
@@ -12,7 +9,7 @@ module Implementation
     return arr.first.first if arr.length.eql? 1
 
     arr.each do |entry|
-      byebug
+      # byebug
       ts, ppl, action = entry
 
       total_ppl += ppl if action.eql? 1

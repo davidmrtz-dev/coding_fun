@@ -1,5 +1,3 @@
-require 'byebug'
-
 module Implementation
   def repeated_n_times(nums)
     non_repeteated_values = nums.group_by(&:itself).transform_values(&:count).select { |_k, v| v.eql? 1 }.keys

@@ -1,6 +1,3 @@
-require 'byebug'
-require 'ostruct'
-
 module Implementation
   def fizz_buzz(n)
     m_three_counter = 0
