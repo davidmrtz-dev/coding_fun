@@ -48,9 +48,3 @@ RSpec.describe 'Buestiest time in the mall' do
     ])).to eq 1487801478
   end
 end
-
-# 1487799425 - 8
-# 1487800378 - 18
-# 1487801478 - 19
-# 1487901013 - 18
-# 1487901211 - 17
