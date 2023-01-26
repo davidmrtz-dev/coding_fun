@@ -17,3 +17,6 @@ module Implementation
     counter.values.each { |val| puts "%.4f" % (val / arr.length) }
   end
 end
+
+# Time complexity: O(n)
+# Space complexity: O(n)

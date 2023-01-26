@@ -4,4 +4,13 @@ require 'byebug'
 
 include Implementation
 
-matching_strings('ok', 'ko')
+matching_strings([
+	'aba',
+	'baba',
+	'aba',
+	'xzxb',
+], [
+	'aba',
+	'xzxb',
+	'ab'
+])
