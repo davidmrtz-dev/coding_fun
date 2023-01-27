@@ -1,3 +1,4 @@
+require 'byebug'
 Dir['./coding_challenges/easy/*.rb'].sort.each { |file| require file }
 Dir['./coding_challenges/medium/*.rb'].sort.each { |file| require file }
 include Implementation
