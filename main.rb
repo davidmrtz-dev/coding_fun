@@ -4,4 +4,6 @@ require 'byebug'
 
 include Implementation
 
-puts flipping_bits('okok')
+puts flipping_bits(2147483647)
+puts flipping_bits(1)
+puts flipping_bits(0)
