@@ -16,9 +16,4 @@ RSpec.describe 'Sparse Array' do
     expect(Implementation::matching_strings(string_2, queries_2))
       .to eq(result_2)
   end
-
-  # it 'should assert' do
-  #   expect(Implementation::final_prices([8, 4, 2, 5, 6, 2, 3]))
-  #     .to eq([4, 2, 0, 3, 4, 2, 3])
-  # end
 end
