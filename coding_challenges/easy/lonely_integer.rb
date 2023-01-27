@@ -1,12 +1,15 @@
 module Implementation
   def lonely_integer(a)
-    register = Array.new(a.length, 0)
-    a.sort!.each do |num|
-      register[num - 1] = register[num - 1] + 1
+    ans = 0
+    a.sort!.each_slice(2) do |n1, n2|
+      if n1 != n2
+        ans = n1
+        break
+      end
     end
-
-    register.find_index(1) + 1
+    ans
   end
 end
 
-# [1, 1, 2, 2, 3, 3, 4]
+# Time Complexity O(n)
+# Space Complexity O(1)
