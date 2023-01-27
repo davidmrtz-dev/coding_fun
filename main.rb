@@ -4,4 +4,4 @@ require 'byebug'
 
 include Implementation
 
-lonely_integer('okok')
+puts lonely_integer([1, 2, 3, 4, 3, 2, 1])
