@@ -1,9 +1,9 @@
-require_relative './coding_challenges/easy/lonely_integer'
+require_relative './coding_challenges/easy/flipping_bits'
 
 require 'byebug'
 
 include Implementation
 
-puts lonely_integer([
-	34, 95, 34, 64, 45, 95, 16, 80, 80, 75, 3, 25, 75, 25, 31, 3, 64, 16, 31
-])
+puts flipping_bits(2147483647)
+puts flipping_bits(1)
+puts flipping_bits(0)
