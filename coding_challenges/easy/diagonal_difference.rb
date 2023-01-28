@@ -4,8 +4,6 @@ module Implementation
     right = arr.length - 1
     left_sum = 0
     right_sum = 0
-    # left_diag = Array.new(arr.length, 0)
-    # right_diag = Array.new(arr.length, 0)
 
     arr.flatten.each_slice(arr.length) do |sub|
       left_sum += sub[left]
