@@ -1,11 +1,7 @@
-require_relative './coding_challenges/easy/diagonal_difference'
+require_relative './coding_challenges/easy/counting_sort_1'
 
 require 'byebug'
 
 include Implementation
 
-puts diagonal_difference([
-	[11, 2, 4],
-	[4, 5, 6],
-	[10, 8, -12]
-])
+puts counting_sort('ok')
