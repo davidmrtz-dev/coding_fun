@@ -16,7 +16,7 @@ RSpec.describe 'ConfigParser' do
   end
 
   describe '.perform' do
-    before(:each) do
+    before do
       File.open('test.txt', 'w') do |f|
         f.write("
           # This is a comment, ignore it
@@ -35,7 +35,7 @@ RSpec.describe 'ConfigParser' do
       end
     end
 
-    after(:each) { File.write('text.txt', "") }
+    after { File.write('text.txt', "") }
 
     describe 'when the input file does not have missing characters' do
       it 'should parse the given file an return a hash of its content' do

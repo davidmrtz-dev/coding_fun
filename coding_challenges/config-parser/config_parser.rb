@@ -55,6 +55,6 @@ class ConfigParser
   end
 end
 
-# path = File.join(File.dirname(__FILE__), 'data.txt')
-# file = File.open(path)
-# puts ConfigParser.perform(file)
+path = File.join(File.dirname(__FILE__), 'data.txt')
+file = File.open(path)
+puts ConfigParser.perform(file)
