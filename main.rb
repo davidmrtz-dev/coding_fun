@@ -1,9 +1,7 @@
-require_relative './coding_challenges/easy/pangrams'
+require_relative './coding_challenges/easy/permuting_two_arrays'
 
 require 'byebug'
 
 include Implementation
 
-puts pangrams(
-	'We promptly judged antique ivory buckles for the next prize'
-)
+puts two_arrays(10, [2, 1, 3], [7, 8, 9])
