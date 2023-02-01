@@ -68,7 +68,7 @@ RSpec.describe 'ConfigParser' do
       it 'should raise an error with the line where the error arises' do
         File.write('test.txt', "#{$/}enable_lints always", mode: 'a')
         file = File.open('test.txt')
-        expect{ ConfigParser.perform(file) }.to raise_error(SyntaxError)
+        expect{ ConfigParser.perform(file) }.to raise_error(SyntaxError, "Expecting character '=' at definition: enable_lintsalways")
       end
     end
   end
