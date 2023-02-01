@@ -28,7 +28,6 @@ class ConfigParser
       return if is_a_comment?(line)
       line = strip_line(line)
       expecting_equal_char_at(line) unless line.include?('=')
-
       attach(line)
     end
 
