@@ -1,7 +1,7 @@
-require_relative './coding_challenges/easy/permuting_two_arrays'
+require_relative './coding_challenges/easy/subarray_division_1'
 
 require 'byebug'
 
 include Implementation
 
-puts two_arrays(10, [2, 1, 3], [7, 8, 9])
+puts birthday([4], 4, 1)
