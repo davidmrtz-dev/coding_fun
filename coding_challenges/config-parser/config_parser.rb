@@ -1,15 +1,12 @@
-require 'byebug'
-require 'benchmark'
-
 class ConfigParser
   @truthy_values = ['true', 'on', 'yes']
   @falsey_values = ['false', 'off', 'no']
   @hash = Hash.new
 
   class << self
-    def perform
-      load_file.each { |line| process_line(line) }
-      load_file.close
+    def perform(file)
+      file.each { |line| process_line(line) }
+      file.close
       @hash
     end
 
@@ -25,20 +22,10 @@ class ConfigParser
     end
 
     def process_line(line)
-      return if is_a_comment?(line)
       line = strip_line(line)
+      return if is_a_comment?(line)
       expecting_equal_char_at(line) unless line.include?('=')
       attach(line)
-    end
-
-    def load_file
-      path = File.join(File.dirname(__FILE__), 'data.txt')
-      begin
-        file = File.open(path)
-      rescue Errno::ENOENT
-        puts 'File not found!'
-        exit
-      end
     end
 
     def expecting_equal_char_at(line)
@@ -68,5 +55,6 @@ class ConfigParser
   end
 end
 
-puts ConfigParser.perform
-puts Benchmark.measure { ConfigParser.perform }
+# path = File.join(File.dirname(__FILE__), 'data.txt')
+# file = File.open(path)
+# puts ConfigParser.perform(file)
