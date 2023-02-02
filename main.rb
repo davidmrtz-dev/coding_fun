@@ -1,14 +1,9 @@
-require_relative './coding_challenges/medium/flipping_matrix'
+require_relative './coding_challenges/easy/sales_by_match'
 
 
 require 'byebug'
 
 include Implementation
 
-puts flipping_matrix([
-  [112, 42, 83, 119],
-  [56, 125, 56, 49],
-  [15, 78, 101, 43],
-  [62, 98, 114, 108]
-])
+puts sock_merchant('lele', 'lala')
 
