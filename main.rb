@@ -5,5 +5,5 @@ require 'byebug'
 
 include Implementation
 
-puts sock_merchant('lele', 'lala')
+puts sock_merchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20])
 
