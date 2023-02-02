@@ -1,5 +1,6 @@
 require_relative './coding_challenges/medium/flipping_matrix'
 
+
 require 'byebug'
 
 include Implementation
@@ -10,3 +11,4 @@ puts flipping_matrix([
   [15, 78, 101, 43],
   [62, 98, 114, 108]
 ])
+
