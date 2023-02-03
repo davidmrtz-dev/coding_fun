@@ -1,8 +1,8 @@
-require_relative './coding_challenges/easy/sales_by_match'
+require_relative './coding_challenges/easy/drawing_book'
 
 require 'byebug'
 
 include Implementation
 
-puts sock_merchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20])
+puts page_count(37455, 29835)
 
