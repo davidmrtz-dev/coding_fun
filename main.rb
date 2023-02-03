@@ -4,5 +4,5 @@ require 'byebug'
 
 include Implementation
 
-puts page_count(34, 4)
+puts page_count(37455, 29835)
 
