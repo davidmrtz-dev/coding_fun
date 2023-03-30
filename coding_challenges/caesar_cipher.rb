@@ -1,23 +1,22 @@
 module Implementation
+  @alpha = 'abcdefghijklmnopqrstuvwxyz'.split('')
+
   def caesar_cipher(s, k)
-    alpha = 'abcdefghijklmnopqrstuvwxyz'.split('')
     enc = ''
-
     s.each_char do |char|
-      unless char.match(/[a-zA-Z]/)
-        enc << char
-        next
-      end
-      is_cap = false
-      is_cap = true if char.match(/[A-Z]/)
-      char.downcase!
-      idx = alpha.find_index(char)
-      rotated_idx = (idx + k) % alpha.length
-      enc_letter = alpha[rotated_idx]
-      enc_letter = enc_letter.capitalize if is_cap
-      enc << enc_letter
+      enc << char && next unless char.match(/[a-zA-Z]/)
+      enc << encoded_char(char, k)
     end
-
     enc
+  end
+
+  def encoded_char(char, k)
+    is_cap = false
+    is_cap = true if char.match(/[A-Z]/)
+    char.downcase!
+    idx = @alpha.find_index(char)
+    rotated_idx = (idx + k) % @alpha.length
+    enc_letter = @alpha[rotated_idx]
+    is_cap ? enc_letter.capitalize : enc_letter
   end
 end
