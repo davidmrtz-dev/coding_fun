@@ -1,1 +1,1 @@
-Solving coding challenges. ok
+Solving coding challenges.
