@@ -1,6 +1,6 @@
 require 'byebug'
 
-Dir['./coding_challenges/**/*.rb'].each { |file| require file }
+Dir['./leetcode/**/**/*.rb'].each { |file| require file }
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
