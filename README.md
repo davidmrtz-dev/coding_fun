@@ -3,7 +3,7 @@
 Welcome to my Ruby coding challenges repository! 🎉  
 
 Here, you'll find solutions to a variety of coding challenges from different LeetCode study plans. These challenges cover diverse topics, including but not limited to:  
-- **Programming Skills:** Sharpening foundational programming concepts.  
+- **Programming Skills:** Sharpening foundational programming concepts.  https://leetcode.com/studyplan/programming-skills/
 - **Functional Programming:** Embracing immutability, higher-order functions, and more.  
 - **Data Structures & Algorithms:** Exploring efficient problem-solving techniques.  
 - **Other Thematic Topics:** Delving into arrays, strings, recursion, and beyond.  
