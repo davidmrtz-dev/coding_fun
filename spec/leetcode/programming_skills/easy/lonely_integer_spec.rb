@@ -1,5 +1,5 @@
 require 'spec_helper'
-require_relative '../../coding_challenges/easy/lonely_integer'
+require './leetcode/programming_skills/easy/lonely_integer'
 
 RSpec.describe 'LonelyInteger' do
   it 'should return the element that is not repeated' do
