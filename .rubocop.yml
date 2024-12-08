@@ -9,6 +9,8 @@ AllCops:
 
 Layout/LineLength:
   Max: 120
+Naming/MethodParameterName:
+  Enabled: false
 Metrics/MethodLength:
   Max: 20
 Metrics/AbcSize:
@@ -37,6 +39,8 @@ Style/FrozenStringLiteralComment:
 Style/MixinUsage:
   Enabled: false
 Style/OpenStructUse:
+  Enabled: false
+Style/StringConcatenation:
   Enabled: false
 
 Layout/HashAlignment:
